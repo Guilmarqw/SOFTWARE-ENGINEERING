@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN-SIGNUP</title>
+    <link rel="stylesheet" href="LOGIN-SIGNUP.css">
+</head>
+<body>
+    <header>
+        <div class="btn">
+            <button type="submit">LOGIN</button>
+        </div>
+    </header>
+    <div class="wrapper">
+        <span type="submit" class="exit"><ion-icon name="close-circle"></ion-icon></span>
+        <div class="design">
+            <img src="imgs/Logo Art 1.png" alt="">
+        </div>
+                            <!-- Login Form -->
+        <div class="formbox-login">
+            <form action="#" id="Login">
+                <h2>Login</h2>
+                <div class="input-box">
+                    <input type="email" name="email" id="email" required placeholder=" ">
+                    <label for="email" class="label1">Email Address</label> <br>
+                    <input type="password" name="password" id="password" required placeholder=" ">
+                    <label for="Password" class="label2">Password</label>
+                </div>
+                <br>
+                <button type="submit">Login</button>
+                <div class="register-signup">
+                    <p>Don't Have An Account? <a href="#" class="register-link" id="showSignup">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+                            <!-- Sign Up Form -->
+        <div class="formbox-signup">
+            <form action="#" id="SignUp">
+                <h2>Sign Up</h2>
+                <div class="input-box">
+                    <input type="text" name="name" id="name" required placeholder=" ">
+                    <label for="name" class="label1">Name</label> <br>
+                    <input type="email" name="email" id="emailSignup" required placeholder=" ">
+                    <label for="email" class="label2">Email Address</label> <br>
+                    <input type="password" name="password" id="passwordSignup" required placeholder=" ">
+                    <label for="Password" class="label3">Password</label>
+                </div>
+                <br>
+                <button type="submit">Sign Up</button>
+                <div class="register-signup">
+                    <p>Already Have An Account? <a href="#" class="register-link" id="showLogin">Log In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.querySelector('.formbox-login');
+            const signupForm = document.querySelector('.formbox-signup');
+            const showSignup = document.getElementById('showSignup');
+            const showLogin = document.getElementById('showLogin');
+            const designElement = document.querySelector('.design');
+            const wrapper = document.querySelector('.wrapper');
+            const btn = document.querySelector('.btn button');
+            const exitButton = document.querySelector('.exit');
+            let isWrapperVisible = false;
+            signupForm.classList.remove('active');
+            loginForm.classList.add('active');
+    
+            function animateDesign() {
+                designElement.classList.add('slide-left');
+                setTimeout(() => {
+                    designElement.classList.remove('slide-left');
+                }, 600);
+            }
+    
+            btn.addEventListener('click', function() {
+                if (!isWrapperVisible) {
+                    wrapper.style.position = "absolute";
+                    wrapper.style.top = "100px";
+                    wrapper.style.left = "50%";
+                    wrapper.style.transform = "translateX(-50%)";
+                    wrapper.classList.add('pop-out');
+                    wrapper.style.opacity = "1";
+                    exitButton.style.opacity = "1";
+                    exitButton.style.pointerEvents = "auto";
+                    isWrapperVisible = true;
+                } 
+            });
+    
+            exitButton.addEventListener('click', function() {
+                if (isWrapperVisible) {
+                    wrapper.style.opacity = "0";
+                    exitButton.style.opacity = "0";
+                    exitButton.style.pointerEvents = "none";
+                    setTimeout(() => {
+                        loginForm.classList.remove('active', 'slide-out');
+                        signupForm.classList.remove('active', 'slide-out');
+                        loginForm.classList.add('active');
+                        signupForm.classList.remove('slide-in');
+                        wrapper.style.position = "relative";
+                    }, 500);
+    
+                    isWrapperVisible = false;
+                }
+            });
+    
+            showSignup.addEventListener('click', function(e) {
+                e.preventDefault();
+                loginForm.classList.remove('active');
+                loginForm.classList.add('slide-out');
+    
+                setTimeout(() => {
+                    signupForm.classList.add('active');
+                    signupForm.classList.remove('slide-in');
+                    signupForm.classList.add('slide-in');
+                }, 100);
+                setTimeout(() => {
+                    animateDesign();
+                }, 350);
+                setTimeout(() => {
+                    loginForm.classList.remove('slide-out');
+                    signupForm.classList.remove('slide-in');
+                }, 900);
+            });
+    
+            showLogin.addEventListener('click', function(e) {
+                e.preventDefault();
+                signupForm.classList.remove('active');
+                signupForm.classList.add('slide-out');
+                setTimeout(() => {
+                    loginForm.classList.add('active');
+                    loginForm.classList.remove('slide-in');
+                    loginForm.classList.add('slide-in');
+                }, 100);
+                setTimeout(() => {
+                    animateDesign();
+                }, 350);
+                setTimeout(() => {
+                    signupForm.classList.remove('slide-out');
+                    loginForm.classList.remove('slide-in');
+                }, 900);
+            });
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
