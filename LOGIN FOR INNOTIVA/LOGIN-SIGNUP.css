@@ -1,0 +1,382 @@
+@media (max-width: 738px) {
+    header {
+        width: 100%;
+        padding: 10px;
+    }
+    body {
+        width: 100%;
+        height: auto;
+        background-size: cover;
+    }
+    .design {
+        display: none;
+    }
+    .btn button {
+        position: relative;
+        padding: 10px 15px;
+        margin: 10px auto;
+        width: fit-content;
+    }
+    .wrapper {
+        border: 3px solid black;
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+        width: 90%;
+        top: 5em;
+        height: fit-content;
+    }
+   .wrapper span{
+    position: absolute;
+    top: 0;
+   }
+   .formbox-login.active h2, .formbox-signup.active h2{
+    position: relative;
+   }
+    .formbox-login.active label, .formbox-signup.active label {
+        position: absolute;
+        left: -2.5em;
+    }
+    .formbox-login, .formbox-signup {
+        width: 100%;
+        height: 47vh;
+        margin: 0 auto;
+    }
+
+    .formbox-signup.active{
+        margin: 0px;
+    }
+    .formbox-login.active button, .formbox-signup.active button{
+        margin-left: 6em;
+    }
+    .formbox-signup.active p, .formbox-login.active p{
+        margin:0px;
+    }
+    .formbox-login input, .formbox-signup input {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+
+    .formbox-login p, .formbox-signup p {
+        margin: 0px;
+        text-align: center;
+    }
+}
+    body{
+        width: max-content;
+        height: max-content;
+        background-image: url(imgs/477660287_649903054145000_4210461626708624495_n.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .exit {
+        position: fixed;
+        right: 0px;
+        font-size: 32px;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        pointer-events: none;
+        z-index: 1;
+    }
+    .exit:hover {
+        cursor: pointer;;
+    }
+    .btn button{
+        position:fixed;
+        font-family: 'Times New Roman', Times, serif;
+        background-color: black;
+        color: white;
+        padding: 10px 60px;
+        border: 1.5px solid #D4AF37;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 10px;
+        right: 20px;
+    }
+    .btn button:hover{
+        background-color: #D4AF37;
+        color: black;
+        border: 1.5px solid black;
+        transition: ease-out 0.3s;
+    }
+    .btn button:active{
+        background-color: black;
+        color: white;
+        border: 1.5px solid #D4AF37;
+    }
+    .wrapper {
+        margin: 20px auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top: 10em;
+        width: 100%;
+        max-width: 800px;
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(35px);
+        overflow: hidden;
+        border-radius: 20px;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        opacity: 0;
+
+    }
+                        /*LOGIN*/
+    .formbox-login{
+        display: flex;
+        justify-content: center;
+    }
+    #Login h2{
+        color: black;
+        text-align: center;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        transition: 2s ease;
+    }
+    #Login h2:hover{
+        color: #D4AF37;
+    }
+    .formbox-login button{
+        font-family: 'Times New Roman', Times, serif;
+        background-color: black;
+        color: white;
+        padding: 10px 60px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-left: 13em;
+    }
+    .formbox-login button:hover{
+        background-color: #D4AF37;
+        color: black;
+        transition: ease-out 0.7s;
+    }
+    .formbox-login button:active{
+        background-color: black;
+        color: white;
+    }
+    .formbox-login p{
+        margin-left: 9.5em;
+        margin-top: 10px;
+    }
+    .formbox-login p a{
+        text-decoration: none;
+        color: black;
+        transition: 0.4s;
+    }
+    .formbox-login p a:hover{
+        color: #D4AF37;
+    }
+    .formbox-login p a:active{
+        color: black;
+    }
+    #Login label, input{
+        display: block;
+        margin: 10px 100px 10px 90px;
+    }
+    .formbox-login input{
+        width: 300px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(35px);
+        border: none;
+        border-bottom: 3px solid black;
+        outline: none;
+        transition: ease 2s;
+    }
+    .formbox-login input:focus{
+        border-bottom: 3px solid #D4AF37;
+    }
+    .formbox-login input:focus, .formbox-login:valid{
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(100px);
+    }
+    .formbox-login label{
+        position: absolute;
+        font-size: 15px;
+        pointer-events: none;
+        transition: ease 0.6s;
+    }
+    .formbox-login input:focus + .label1, .formbox-login input:valid + .label1{
+        top: 7em;
+        color: #D4AF37;
+    }
+    .formbox-login input:focus + .label2, .formbox-login input:valid + .label2{
+        top: 12em;
+        color: #D4AF37;
+    }
+    .design{
+        border: 1px solid black;
+        background-color: black;
+        padding: 80px 0px;
+        position: relative;
+        transition: transform 0.6s ease;
+    }
+                        /*SIGNUP FORM*/
+    .design{
+        border: 1px solid black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: black;
+        padding: 80px 0px;
+        position: relative;
+        transition: transform 0.6s ease;
+        z-index: 1;
+    }
+    .formbox-signup{
+        margin-left: 20em;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+    }
+    #SignUp h2{
+        color: black;
+        text-align: center;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        transition: 2s ease;
+    }
+    #SignUp h2:hover{
+        color: #D4AF37;
+    }
+    .formbox-signup button{
+        font-family: 'Times New Roman', Times, serif;
+        background-color: black;
+        color: white;
+        padding: 10px 60px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-left: 13em;
+    }
+    .formbox-signup button:hover{
+        background-color: #D4AF37;
+        color: black;
+        transition: ease-out 0.7s;
+    }
+    .formbox-signup button:active{
+        background-color: black;
+        color: white;
+    }
+    .formbox-signup p{
+        margin-left: 9em;
+        margin-top: 10px;
+    }
+    .formbox-signup p a{
+        text-decoration: none;
+        color: black;
+        transition: 0.4s;
+    }
+    .formbox-signup p a:hover{
+        color: #D4AF37;
+    }
+    .formbox-signup p a:active{
+        color: black;
+    }
+    #SignUp label, input{
+        display: block;
+        margin: 10px 100px 10px 90px;
+    }
+    .formbox-signup input{
+        width: 300px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(100px);
+        border: none;
+        border-bottom: 3px solid black;
+        outline: none;
+        transition: ease 2s;
+    }
+    .formbox-signup input:focus{
+        border-bottom: 3px solid #D4AF37;
+    }
+    .formbox-signup input:focus, .formbox-signup:valid{
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(100px);
+    }
+    .formbox-signup label{
+        position: absolute;
+        font-size: 15px;
+        pointer-events: none;
+        transition: ease 0.6s;
+    }
+    .label1{
+        padding-left: 11px;
+        top: 8.6em;
+    }
+    .label2{
+        padding-left: 11px;
+        top: 13.68em;
+    }
+    .label3{
+        padding-left: 11px;
+        top: 18.68em;
+    }
+    .formbox-signup input:focus + .label1, .formbox-signup input:valid + .label1{
+        top: 7em;
+        color: #D4AF37;
+    }
+    .formbox-signup input:focus + .label2, .formbox-signup input:valid + .label2{
+        top: 12em;
+        color: #D4AF37;
+    }
+    .formbox-signup input:focus + .label3, .formbox-signup input:valid + .label3{
+        top: 17em;
+        color: #D4AF37;
+    }
+                        /*SWITCH BUTTON*/
+    .formbox-login, .formbox-signup {
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .formbox-login.active, .formbox-signup.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0%);
+    }
+    .formbox-login, .formbox-signup {
+        opacity: 0;
+        visibility:hidden;
+        transform: translateX(-100%);
+    }
+
+    .formbox-signup.slide-out, .formbox-login.slide-out {
+        opacity: 0;
+        transform: translateX(-100%);
+        visibility: hidden;
+    }
+
+    .formbox-signup.slide-in, .formbox-login.slide-in {
+        opacity: 1;
+        transform: translateX(-100%);
+        visibility: visible;
+    }
+    .formbox-signup.active {
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .design {
+        transition: transform 0.6s ease;
+    }
+
+    .slide-left {
+        transform: translateX(-100%);
+    }
+    .pop-out {
+        opacity: 1;
+    }
+
+    @keyframes colorChange {
+        0% {
+            color: black;
+        }
+        50% {
+            color: #D4AF37;
+        }
+
+        100% {
+            color: black;
+        }
+    }
+    .wrapper h2 {
+        animation: colorChange 8s infinite;
+    }
